@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login UI</title>
+    <link rel="stylesheet" href="/assets/css/login_style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="assets/imgs/Background.png" alt="Login Illustration" />
+        </div>
+        <div class="right">
+            <div class="form-container">
+                <h2>Login into your account</h2>
+                <label>Email Id :</label>
+                <div class="input-group">
+                    <input name="email" type="email" placeholder="info@provisttechnologies.com" required/>
+                    <span><i class="fas fa-envelope"></i></span>
+                </div>
+                <label>Password</label>
+                <div class="input-group">
+                    <input name="password" type="password" placeholder="Enter your password" required/>
+                    <span><i class="fas fa-lock"></i></span>
+                </div>
+                <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button class="btn-login">Login now</button>
+                <div class="divider">
+                    <span></span>
+                    <p>OR</p>
+                    <span></span>
+                </div>
+                <button class="btn-signup">Signup now</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/login_scripts.js"></script>
+</body>
+
+</html>

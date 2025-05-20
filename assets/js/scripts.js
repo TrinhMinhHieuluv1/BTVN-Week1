@@ -6,6 +6,9 @@ var searchKeyword = '';
 var sortBy = 'firstName-asc';
 
 window.onload = function () {
+    document.getElementsByClassName('user-name')[0].innerHTML = JSON.parse(localStorage.getItem('account')).firstName;
+    document.getElementsByClassName('user-avatar')[0].src = JSON.parse(localStorage.getItem('account')).image;
+    document.getElementById("sayHello").innerHTML = 'Hello ' + JSON.parse(localStorage.getItem('account')).firstName + ' 👋';
     fetch('https://dummyjson.com/users')
         .then(res => res.json())
         .then(data => {

@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left img {
+  width: 100%;
+  height: 559px;
+}
+
+.right {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-container {
+  width: 100%;
+  max-width: 360px;
+}
+
+.form-container h2 {
+  font-size: 18px;
+  margin-bottom: 70px;
+  color: #333;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f3f3f3;
+}
+
+.input-group span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #fff;
+  background-color: #2b2b72;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.forgot {
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.forgot a {
+  font-size: 12px;
+  color: #2b2b72;
+  text-decoration: underline;
+}
+
+.btn-login {
+  width: 100%;
+  background-color: #2b2b72;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.divider p {
+  padding: 0 10px;
+  color: #888;
+  font-size: 14px;
+}
+
+.btn-signup {
+  width: 100%;
+  background-color: transparent;
+  color: #2b2b72;
+  padding: 12px;
+  border: 1px solid #2b2b72;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
