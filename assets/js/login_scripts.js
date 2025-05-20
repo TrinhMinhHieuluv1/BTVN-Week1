@@ -23,7 +23,7 @@ $(".btn-login").on("click", function () {
         .then(data => {
             localStorage.setItem('account', JSON.stringify(data));
             alert("Đăng nhập thành công");
-            window.location.href = "/index.html";
+            window.location.href = "index.html";
         })
         .catch(error => {
             alert("Error:", error.message);
