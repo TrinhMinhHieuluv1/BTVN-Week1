@@ -1,124 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>User Dashboard</title>
-  <link rel="stylesheet" href="/assets/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/assets/imgs/logo.jpg" />
+                <div>Dashboard</div>
+                <span>v.01</span>
+            </div>
+            <nav>
+                <div class="nav-item active"><img src="assets/imgs/square-user.svg" />Users<span>></span></div>
+                <div class="nav-item"><img src="assets/imgs/messages-question.svg" />Help<span>></span></div>
+            </nav>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <div class="nav">
-      <h2>Dashboard</h2>
-      <button class="nav-button">Users</button>
-      <button class="nav-button">Help</button>
+            <div class="account">
+                <img src="assets/imgs/avatar.png" class="user-avatar">
+                <div class="user-info">
+                    <p class="user-name">Evano</p>
+                    <p class="user-role">Project Manager</p>
+                </div>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </div>
+        </aside>
+        <main>
+            <header>
+                <div class="header-content">
+                    <h1>Hello Evano 👋</h1>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </header>
+            <section class="stats">
+                <div class="stat-card">
+                    <img src="assets/imgs/user-group.svg" />
+                    <div class="stat-card-container">
+                        <div class="stat-label">Total Users</div>
+                        <div class="stat-value">5,423</div>
+                        <div class="stat-change">
+                            <div class="inc">↑ 10% </div>&nbsp;this month
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <img src="assets/imgs/user-check.svg" />
+                    <div class="stat-card-container">
+                        <div class="stat-label">Members</div>
+                        <div class="stat-value">1,893</div>
+                        <div class="stat-change">
+                            <div class="dec">↓ 1% </div>&nbsp;this month
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <img src="assets/imgs/desktop.svg" />
+                    <div class="stat-card-container">
+                        <div class="stat-label">Active Now</div>
+                        <div class="stat-icon"></div>
+                        <div class="stat-value">189</div>
+                    </div>
+                </div>
+            </section>
+            <section class="users-table">
+                <div class="table-header">
+                    <h2>All Users <span class="active-members">Active Members</span></h2>
+                    <div class="table-actions">
+                        <div class="search-bar small">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search..." id="searchUser">
+                        </div>
+
+                        <div class="sort-container">
+                            <span class="sort-label">Sort by :</span>
+                            <select class="sort-options" id="sortOptions">
+                                <option value="firstName-asc" selected>User Name ▲</option>
+                                <option value="firstName-desc">User Name ▼</option>
+                                <option value="company-asc">Company ▲</option>
+                                <option value="company-desc">Company ▼</option>
+                                <option value="country-asc">Country ▲</option>
+                                <option value="country-desc">Country ▼</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Users Name</th>
+                            <th>Company</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Country</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <nav>
+                    <ul class="pagination" id="pagination"></ul>
+                </nav>
+            </section>
+        </main>
     </div>
 
-    <div class="profile">
-      <div class="avatar"></div>
-      <div>
-        <strong>Evano</strong><br />
-        <small>Project Manager</small>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main Content -->
-  <div class="main">
-    <div class="header">
-      <h1>Hello Evano 👋</h1>
-      <input type="text" placeholder="Search..." class="search-box"/>
-    </div>
-
-    <div class="stats">
-      <div class="stat-card">
-        <h4>Total Users</h4>
-        <div class="value">5,423</div>
-        <div class="change up">↑ 16% this month</div>
-      </div>
-      <div class="stat-card">
-        <h4>Members</h4>
-        <div class="value">1,893</div>
-        <div class="change down">↓ 1% this month</div>
-      </div>
-      <div class="stat-card">
-        <h4>Active Now</h4>
-        <div class="value">189</div>
-      </div>
-    </div>
-
-    <div class="table-section">
-      <div class="table-header">
-        <h3>All Users</h3>
-        <input type="text" placeholder="Search user..." class="search-box"/>
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th>User Name</th>
-            <th>Company</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th>Country</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Jane Cooper</td>
-            <td>Microsoft</td>
-            <td>(225) 555-0118</td>
-            <td>jane@microsoft.com</td>
-            <td>United States</td>
-            <td><span class="status active">Active</span></td>
-          </tr>
-          <tr>
-            <td>Floyd Miles</td>
-            <td>Yahoo</td>
-            <td>(205) 555-0100</td>
-            <td>floyd@yahoo.com</td>
-            <td>Kiribati</td>
-            <td><span class="status inactive">Inactive</span></td>
-          </tr>
-          <tr>
-            <td>Ronald Richards</td>
-            <td>Adobe</td>
-            <td>(302) 555-0107</td>
-            <td>ronald@adobe.com</td>
-            <td>Israel</td>
-            <td><span class="status inactive">Inactive</span></td>
-          </tr>
-          <tr>
-            <td>Marvin McKinney</td>
-            <td>Tesla</td>
-            <td>(252) 555-0126</td>
-            <td>marvin@tesla.com</td>
-            <td>Iran</td>
-            <td><span class="status inactive">Inactive</span></td>
-          </tr>
-          <tr>
-            <td>Jerome Bell</td>
-            <td>Google</td>
-            <td>(629) 555-0129</td>
-            <td>jerome@google.com</td>
-            <td>Réunion</td>
-            <td><span class="status active">Active</span></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="pagination">
-        <button>1</button>
-        <button class="active-page">2</button>
-        <button>3</button>
-        <button>...</button>
-        <button>6</button>
-      </div>
-    </div>
-  </div>
-
+    <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>
